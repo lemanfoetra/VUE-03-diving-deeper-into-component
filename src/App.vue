@@ -13,7 +13,9 @@
     <button type="button" @click="setSelectedComponent('manage-goals')">Manage Button</button>
     <!-- <active-goals></active-goals>
     <manage-goals></manage-goals> -->
-    <component :is="selectedCompoenent == 'active-goals' ? 'active-goals' : 'manage-goals'"></component>
+    <KeepAlive>
+      <component :is="selectedCompoenent == 'active-goals' ? 'active-goals' : 'manage-goals'"></component>
+    </KeepAlive>
   </div>
 </template>
 
